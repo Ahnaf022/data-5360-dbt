@@ -1,0 +1,16 @@
+version: 2
+
+models:
+  - name: oliver_dim_employee
+    description: "Oliver's Employee Dimension"
+  - name: oliver_dim_date
+    description: "Oliver's Date Dimension"
+  - name: stg_employee_certifications
+    description: |
+      Staging model for employee certifications.
+      Parses certification_name, certification_cost, and certification_awarded_date out of the certification_json field.
+  - name: fact_certification
+    description: |
+      Employee Certification Fact.
+      The grain of this table is employee + date + certification.
+      Each record represents one certification awarded to one employee on a given date.
