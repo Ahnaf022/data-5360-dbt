@@ -5,6 +5,7 @@ sources:
     database: AHNAFISLAM
     schema: insurance_dw_source
     tables:
+      - name: customer_service_interactions
       - name: agents
       - name: claims
       - name: customers
